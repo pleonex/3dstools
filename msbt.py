@@ -189,7 +189,7 @@ class Msbt:
         json.dump(output, open(filename, 'w'), indent=2, sort_keys=True, ensure_ascii=False)
 
     def from_json(self, filename):
-        json_data = json.load(open(filename, 'r'))
+        json_data = json.load(open(filename, 'r', encoding='utf-8'))
         strings = json_data['strings']
         structure = json_data['structure']
 

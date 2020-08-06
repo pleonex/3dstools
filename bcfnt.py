@@ -187,7 +187,7 @@ class Bffnt:
         self._parse_tglp_data(data)
 
     def load(self, json_filename):
-        json_data = json.load(open(json_filename, 'r'))
+        json_data = json.load(open(json_filename, 'r', encoding='utf-8'))
 
         self.order = self.load_order
         self.version = json_data['version']
